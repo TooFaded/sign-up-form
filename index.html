@@ -9,30 +9,56 @@
 </head>
 <body>
     <section>
-        <div class="form-container">
-        
-            <form id="signupForm" action="">
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" required>
+        <div class="signup-container">
+            
+            <div class="image-card">
+                <img src="aurora.jpg" alt="Image" class="image-card__image">
+                <h2 class="image-card__title">Welcome to Our Website</h2>
+                <p class="image-card__subtitle">Sign up to join our community!</p>
+            </div>
+
+            <!-- <h1 class="signup-form__heading">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started</h1> -->
+            
+            
+
+            <form id="signupForm" class="signup-form" action="">
+                <h1 class="signup-form__title">Let's do this!</h1>
+                <div class="signup-form__group">
+                    <label for="firstName">First Name
+                        <input type="text" id="firstName" name="firstName" class="signup-form__input" required>
+                    </label>
+                    
                 
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="lastName" required>
+                    <label for="lastName">Last Name
+                        <input type="text" id="lastName" name="lastName" class="signup-form__input" required>
+                    </label>
+                    
 
-                <label for="phoneNumber">Phone Number</label>
-                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                    <label for="phoneNumber">Phone Number
+                        <input type="tel" id="phoneNumber" name="phoneNumber" class="signup-form__input" required> 
+                    </label>
+                    
+               
+                    <label for="email">Email
+                        <input type="email" id="email" name="email" class="signup-form__input" required>
+                    </label>
+                    
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                    <label for="password">Password
+                        <input type="password" id="password" name="password" class="signup-form__input" required>
+                    </label>
+                    
 
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
-
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" required>
-
-                <input type="submit" value="Create Account">
+                    <label for="confirmPassword">Confirm Password
+                        <input type="password" id="confirmPassword" name="confirmPassword" class="signup-form__input" required>
+                    </label>
+                    
+                </div>
+                <input type="submit" value="Create Account" class="signup-form__submit">
             </form>
+            
         </div>
+        
     </section>
 </body>
 </html>
