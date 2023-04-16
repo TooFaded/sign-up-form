@@ -1,4 +1,10 @@
-.signup-container {
+:root {
+    background-color: gray;
+
+}
+
+
+.main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
@@ -6,6 +12,7 @@
     height: 100vh;
     padding: 20px;
     background-color: gray;
+    
     
     
   }
@@ -32,7 +39,17 @@
     font-size: 16px;
     color: #777;
   }
-  
+
+  .header {
+    margin: 20px;
+    margin-bottom: 160px;
+    font-size: 20px;
+    
+    
+    
+  }
+
+ 
   .signup-form {
     padding: 20px;
     background-color: #fff;
@@ -40,17 +57,21 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     
     
+    
+    
+    
   }
   
-  .signup-form__title {
+  .signup-form__title{
     font-size: 24px;
     margin-bottom: 20px;
+    
     
   }
   
   .signup-form__group {
     display: grid;
-    grid-template-columns: .4fr .2fr;
+    grid-template-columns: .1fr .1fr;
     gap: 20px;
     padding: 20px;
   }
@@ -60,7 +81,7 @@
   
   .signup-form__input {
     padding: 10px;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     border-radius: 4px;
     
   }
@@ -80,4 +101,23 @@
   
   .signup-form__submit:hover {
     background-color: #0056b3;
+    
   }
+
+  input:invalid:focus {
+    background-color: rgb(241, 112, 112);
+    
+  }
+  
+   input:valid { 
+    border-color: rgb(88, 206, 88);
+    
+
+  } 
+
+  .error-message {
+    color: red;
+  }
+  
+
+

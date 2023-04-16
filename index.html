@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
     <title>Sign-up</title>
 </head>
 <body>
     <section>
-        <div class="signup-container">
+        <div class="main">
             
             <div class="image-card">
                 <img src="aurora.jpg" alt="Image" class="image-card__image">
@@ -17,46 +18,52 @@
                 <p class="image-card__subtitle">Sign up to join our community!</p>
             </div>
 
-            <!-- <h1 class="signup-form__heading">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started</h1> -->
             
-            
+            <div class="signup-container">
 
-            <form id="signupForm" class="signup-form" action="">
-                <h1 class="signup-form__title">Let's do this!</h1>
-                <div class="signup-form__group">
-                    <label for="firstName">First Name
-                        <input type="text" id="firstName" name="firstName" class="signup-form__input" required>
-                    </label>
+                <div class="header">
+                    <h1 class="signup-form-heading">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started!</h1>
+                </div>
+
+                <form id="signupForm" class="signup-form" action="">
+                    <h1 class="signup-form__title">Let's do this!</h1>
                     
-                
-                    <label for="lastName">Last Name
-                        <input type="text" id="lastName" name="lastName" class="signup-form__input" required>
-                    </label>
+                    <div class="signup-form__group">
+                        <label for="firstName">First Name
+                            <input type="text" id="firstName" name="firstName" class="signup-form__input" required>
+                        </label>
+                    
+                        <label for="lastName">Last Name
+                            <input type="text" id="lastName" name="lastName" class="signup-form__input" required>
+                        </label>
                     
 
-                    <label for="phoneNumber">Phone Number
-                        <input type="tel" id="phoneNumber" name="phoneNumber" class="signup-form__input" required> 
-                    </label>
+                        <label for="phoneNumber">Phone Number
+                            <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="phoneNumber" name="phoneNumber" class="signup-form__input" title="Format must be 123-456-7890" required> 
+                        </label>
                     
                
-                    <label for="email">Email
-                        <input type="email" id="email" name="email" class="signup-form__input" required>
-                    </label>
+                        <label for="email">Email
+                            <input type="email" id="email" name="email" class="signup-form__input" required>
+                        </label>
                     
 
-                    <label for="password">Password
-                        <input type="password" id="password" name="password" class="signup-form__input" required>
-                    </label>
+                        <label for="password">Password
+                            <input type="password" id="password" name="password" class="signup-form__input" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                        </label>
                     
 
-                    <label for="confirmPassword">Confirm Password
-                        <input type="password" id="confirmPassword" name="confirmPassword" class="signup-form__input" required>
-                    </label>
-                    
+                        <label for="confirmPassword">Confirm Password
+                            <input type="password" id="confirmPassword" name="confirmPassword" class="signup-form__input" required>
+                            <span id="confirmPasswordError" class="error-message"></span>
+                        </label>
+                    </div>
+                </form>
+                <div class="submit-button-container">
+                    <input type="submit" form="signupForm" value="Create Account" class="signup-form__submit">
+                    <p>Already have an account? <a href="">LOG IN</a></p>
                 </div>
-                <input type="submit" value="Create Account" class="signup-form__submit">
-            </form>
-            
+            </div>
         </div>
         
     </section>
