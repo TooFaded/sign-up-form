@@ -1,58 +1,155 @@
 :root {
-    background-color: gray;
+    background-color:rgb(136, 170, 224);
 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 
 .main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 5px;
     align-items: center;
     height: 100vh;
-    padding: 20px;
-    background-color: gray;
-    
-    
-    
+    padding: 20px; 
   }
-  
+
   .image-card {
-    background-color: #f2f2f2;
+    max-width: 600px;
+    height: 869.25px;
+    perspective: 1000px;
+    margin: 100px;
+
+  }
+
+  .image-card__card-front {
+    text-align: center;
+    background-color: rgb(165, 190, 228);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   }
+
+  .image-card__inner {
+    min-width: 160px;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .image-card:hover > .image-card__inner {
+    transform: rotateY(180deg);
+  }
+
+  .image-card__card-front,
+  .image-card__card-back {
+    
+    max-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    overflow: hidden;
+
+  }
+
+  .image-card__card-back {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(165, 190, 228);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transform: rotateY(180deg);
+  }
+
+  card-content {
+    height: auto;
+    max-width: 100%;
+  
+   
+   
+
+  }
+
+
   
   .image-card__image {
+    position: relative;
     max-width: 100%;
     height: auto;
     margin-bottom: 20px;
   }
+
+  .card-odin-icon {
+    background-color: rgb(165, 190, 228);
+    max-width: 100%;
+  }
+
+  .icon-title  {
+    color: whitesmoke;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 6vw;
+    font-family: 'Aboreto', cursive;
+    text-shadow: 2px 2px 1px rgb(180, 180, 180);
+    
+    
+    
+    
+    
+
+  }
   
   .image-card__title {
-    font-size: 24px;
+    font-family: 'Aboreto', cursive;
+    color:#fcf4f4;
+    font-size: calc(12px + 1vw);
     margin-bottom: 10px;
+    text-shadow: 2px 2px 1px rgb(150, 150, 150);
+    
   }
   
   .image-card__subtitle {
+    font-family: 'Aboreto', cursive;
+    padding: 12px;
     font-size: 16px;
-    color: #777;
+    color: #fcf4f4;
+    text-shadow: 2px 2px 1px rgb(150, 150, 150);
   }
 
   .header {
+    font-family: 'Aboreto', cursive;
+    color: whitesmoke;
+    font-weight: bold;
     margin: 20px;
     margin-bottom: 160px;
     font-size: 20px;
+    text-shadow: 2px 3px 1px rgb(150, 150, 150);
     
     
-    
+  }
+
+  h2 {
+    margin: 30px;
   }
 
  
   .signup-form {
+    max-width: 700px;
+    margin-right: 20px;
     padding: 20px;
-    background-color: #fff;
+    background-color: rgb(165, 190, 228);
     border-radius: 8px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     
@@ -63,6 +160,8 @@
   }
   
   .signup-form__title{
+    font-family: 'Aboreto', cursive;
+    color: whitesmoke;
     font-size: 24px;
     margin-bottom: 20px;
     
@@ -70,6 +169,8 @@
   }
   
   .signup-form__group {
+    color: whitesmoke;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: grid;
     grid-template-columns: .1fr .1fr;
     gap: 20px;
@@ -81,7 +182,8 @@
   
   .signup-form__input {
     padding: 10px;
-    border: 2px solid #ddd;
+    border: 2px solid white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
     
   }
@@ -90,7 +192,7 @@
     width: 30%;
     margin: 10px;
     padding: 10px;
-    background-color: #007bff;
+    background-color: #2d92fe;
     color: #fff;
     font-weight: bold;
     border: none;
@@ -102,6 +204,17 @@
   .signup-form__submit:hover {
     background-color: #0056b3;
     
+  }
+
+  .login-text {
+    color: whitesmoke;
+    font-family: 'Aboreto', cursive;
+    margin-bottom: 100px;
+    
+  }
+
+  a {
+    text-decoration: none;
   }
 
   input:invalid:focus {
@@ -119,5 +232,16 @@
     color: red;
   }
   
+
+
+  @media (max-width: 768px) {
+    .main {
+      
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: none;
+    }
+
+    
+  }
 
 

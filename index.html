@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Montserrat+Alternates:wght@500&display=swap" rel="stylesheet">
+
     <script src="index.js" defer></script>
     <title>Sign-up</title>
 </head>
@@ -13,9 +17,19 @@
         <div class="main">
             
             <div class="image-card">
-                <img src="aurora.jpg" alt="Image" class="image-card__image">
-                <h2 class="image-card__title">Welcome to Our Website</h2>
-                <p class="image-card__subtitle">Sign up to join our community!</p>
+                <div class="image-card__inner">
+                    <div class="image-card__card-front">
+                        <img src="aurora.jpg" alt="Image" class="image-card__image">
+                        <h2 class="image-card__title">Welcome to The Odin Project</h2>
+                        <p class="image-card__subtitle">Sign up to join our community!</p>
+                    </div>
+                    <div class="image-card__card-back">
+                        <div class="card-content">
+                            <img src="odin-lined.png" class="card-odin-icon" alt="">
+                            <h1 class="icon-title">ODIN</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             
@@ -23,6 +37,7 @@
 
                 <div class="header">
                     <h1 class="signup-form-heading">This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started!</h1>
+                    <h2>You know you want to.</h2>
                 </div>
 
                 <form id="signupForm" class="signup-form" action="">
@@ -61,7 +76,7 @@
                 </form>
                 <div class="submit-button-container">
                     <input type="submit" form="signupForm" value="Create Account" class="signup-form__submit">
-                    <p>Already have an account? <a href="">LOG IN</a></p>
+                    <p class="login-text">Already have an account? <a href="">LOG IN</a></p>
                 </div>
             </div>
         </div>

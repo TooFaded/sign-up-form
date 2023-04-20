@@ -14,3 +14,5 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
         confirmPasswordError.textContent = ""; // Clear error message
     }
 });
+
+
