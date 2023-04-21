@@ -117,6 +117,13 @@
     text-shadow: 2px 2px 1px rgb(150, 150, 150);
   }
 
+  .image-credit {
+    font-size: .8vw;
+    width: 100%;
+    text-align: center;
+    color: whitesmoke;
+  }
+
   .header {
     font-family: 'Aboreto', cursive;
     color: whitesmoke;
